@@ -1,0 +1,16 @@
+{% extends "book/base.html" %}
+
+
+{% block title %}
+    Delete Sure
+{% endblock title %}
+
+{% block content %}
+    <form action="" method="post" class='text-center'>
+        {% csrf_token %}
+        <h3>Are you sure?</h3>
+        <button class="btn btn-danger mt-4">Confirm Delete</button>
+        <a href="{% url "book-detail" id %}" class="btn btn-primary mt-4">Cancel</a>
+    </form>
+{% endblock content %}
+
